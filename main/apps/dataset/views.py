@@ -1,11 +1,12 @@
 import json
 
-import apps.dataset.crud as dataset_crud
 from django.http import JsonResponse
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
+
+import apps.dataset.crud as dataset_crud
+from utils.errors import DatasetDoesNotExist, UserDoesNotExist
 from utils.response import error_response
-from utils.errors import UserDoesNotExist, DatasetDoesNotExist
 
 
 @csrf_exempt
@@ -80,9 +81,7 @@ def add_dataset_file(request, user_id, dataset_id):
     Endpoint to delete file
     """
     file_data = json.loads(request.body)
-    return JsonResponse(
-        dataset_crud.create_file(user_id, dataset_id, file_data)
-    )
+    return JsonResponse(dataset_crud.create_file(user_id, dataset_id, file_data))
 
 
 @csrf_exempt
@@ -91,9 +90,7 @@ def delete_dataset_file(request, file_id, user_id):
     Endpoint to delete file
     """
     body = json.loads(request.body)
-    return JsonResponse(
-        dataset_crud.delete_dataset_file(body, file_id, user_id)
-    )
+    return JsonResponse(dataset_crud.delete_dataset_file(body, file_id, user_id))
 
 
 # Search and Filtering Endpoints
@@ -181,9 +178,7 @@ def create_bookmark(request, user_id):
     Endpoint to create bookmark
     """
     data = json.loads(request.body)
-
-    dataset_crud.create_bookmark(user_id, data)
-
+    bookmark = dataset_crud.create_bookmark(user_id, data)
     return JsonResponse(bookmark.serialize())
 
 

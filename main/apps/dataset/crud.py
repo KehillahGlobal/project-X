@@ -1,22 +1,12 @@
-from apps.dataset.models import (
-    DatasetBookmark,
-    DatasetComment,
-    Dataset,
-    DatasetMetadata,
-    DatasetFile,
-    DatasetLike,
-    DatasetTag,
-)
+from datetime import datetime
+
+from apps.dataset.models import (Dataset, DatasetBookmark, DatasetComment,
+                                 DatasetFile, DatasetLike, DatasetMetadata,
+                                 DatasetTag)
 from apps.organization.crud import get_org
 from apps.user.models import User
-from utils.response import error_response
-from datetime import datetime
-from utils.errors import (
-    UserDoesNotExist,
-    DatasetDoesNotExist,
-    CommentDoesNotExist,
-    UserNotAuthorized,
-)
+from utils.errors import (CommentDoesNotExist, DatasetDoesNotExist,
+                          UserDoesNotExist, UserNotAuthorized)
 
 
 def create_dataset(data, user_id: int):
@@ -118,9 +108,7 @@ def update_dataset_metadata(dataset_id, data):
 
     metadata = dataset.metadata
     if file_data := data.get("file"):
-        metadata.file = create_dataset_file(
-            dataset.author.id, dataset_id, file_data
-        )
+        metadata.file = create_dataset_file(dataset.author.id, dataset_id, file_data)
 
     for field, value in DatasetMetadata.custom_fields:
         setattr(metadata, field, value)
@@ -140,9 +128,7 @@ def create_comment(dataset_id, user_id, data):
     if not (owner and dataset):
         return None
 
-    comment = DatasetComment(
-        dataset=dataset, author=owner, body=data.get("message")
-    )
+    comment = DatasetComment(dataset=dataset, author=owner, body=data.get("message"))
     comment.save()
 
     return {"comment": comment.serialize()}
@@ -201,7 +187,7 @@ def delete_file(user_id, file_id):
 
 def create_dataset_tags(user_id, dataset_id, tag):
     """Create a `tag` for dataset `dataset_id` with user `user_id` as the author."""
-    tag = Tag(name=name, dataset_id=dataset_id)
+    tag = DatasetTag(name=tag, dataset_id=dataset_id)
     tag.save()
 
 
@@ -216,13 +202,13 @@ def create_like(dataset_id, user_id, data):
     """
     author = User.objects.get(id=user_id)
     dataset = Dataset.objects.get(id=dataset_id)
-    if not (owner and dataset):
+    if not (author and dataset):
         return None
 
-    like = DatasetLike(dataset=dataset, author=owner, body=data.get("message"))
-    comment.save()
+    like = DatasetLike(dataset=dataset, author=author, body=data.get("message"))
+    like.save()
 
-    return {"comment": comment.serialize()}
+    return {"comment": like.serialize()}
 
 
 def delete_like(like_id, user_id):
@@ -245,7 +231,7 @@ def create_bookmark(user_id, bookmark_data):
     """
     dataset = dataset = read_dataset(bookmark_data.get("dataset_id"))
     user = User.objects.get(id=user_id)
-    bookmark = Bookmark.objects.filter(
+    bookmark = DatasetBookmark.objects.filter(
         owner_user=user, dataset=dataset, status=True
     ).first()
 

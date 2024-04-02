@@ -1,16 +1,8 @@
 from django.contrib import admin
 
-from .models import (
-    DatasetBookmark,
-    DatasetComment,
-    Dataset,
-    RelDatasetDatasetFile,
-    DatasetMetadata,
-    RelDatasetDatasetTag,
-    DatasetFile,
-    DatasetLike,
-    DatasetTag,
-)
+from .models import (Dataset, DatasetBookmark, DatasetComment, DatasetFile,
+                     DatasetLike, DatasetMetadata, DatasetTag,
+                     RelDatasetDatasetFile, RelDatasetDatasetTag)
 
 # Register your models here.
 admin.site.register(Dataset)

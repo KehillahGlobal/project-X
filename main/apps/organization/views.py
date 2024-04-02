@@ -1,7 +1,8 @@
 import json
 
-import apps.organization.crud as organization_dao
 from django.views.decorators.csrf import csrf_exempt
+
+import apps.organization.crud as organization_dao
 from utils.response import error_response, success_response
 
 
