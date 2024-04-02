@@ -1,4 +1,4 @@
 */*.env
 */*.sqlite3
-*/__pycache__
+/main/*/__pycache__
 venv
