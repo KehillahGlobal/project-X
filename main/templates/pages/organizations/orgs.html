@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GDS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../../static/css/style.css">
+  </head>
+  <body class="home">
+    
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../../pages/homepage.html">
+            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 30 30" height="25px" viewBox="0 0 30 30" width="25px" fill="#000000"><rect fill="none" height="24" width="24"/><path d="M12,2C6.48,2,2,6.48,2,12c0,1.33,0.26,2.61,0.74,3.77L8,10.5l3.3,2.78L14.58,10H13V8h5v5h-2v-1.58L11.41,16l-3.29-2.79 l-4.4,4.4C5.52,20.26,8.56,22,12,22h8c1.1,0,2-0.9,2-2v-8C22,6.48,17.52,2,12,2z M19.5,20.5c-0.55,0-1-0.45-1-1s0.45-1,1-1 s1,0.45,1,1S20.05,20.5,19.5,20.5z"/></svg>
+            Kehillah Global
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav mx-auto mb-2 mb-xl-0 center-links">
+                <!-- <a class="nav-link" aria-current="page" href="../../pages/homepage.html">Home</a> -->
+                <a class="nav-link" href="../../pages/data/catalog.html">Data</a>
+                <a class="nav-link active" href="../../pages/organizations/orgs.html">Organizations</a>
+                <div class="dropdown">
+                    <button class="btn nav-link dropdown-toggle" type="button" id="aboutDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        About
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="aboutDropdown">
+                        <a class="dropdown-item" href="../../pages/about_us.html">About Us</a>
+                        <a class="dropdown-item" href="../../pages/terms.html">Terms of Service</a>
+                        <a class="dropdown-item" href="#">Website Policies</a>
+                    </div>
+                </div>
+                <a class="nav-link" href="../../pages/contact.html">Contact</a>
+            </div>
+            <div class="navbar-nav ms-auto mb-2 mb-xl-0">
+                <a class="nav-link" href="../../pages/login.html" id="nav-btn">Login</a>
+                <a href="../../pages/signup.html"><button type="button" class="btn btn-dark">Sign Up</button></a>
+            </div>
+          </div>
+        </div>
+    </nav>
+
+    <main class="container mt-5">
+      <div class="row">
+        <div class="col-lg-12 card-margin">
+            <!-- <div class="card search-form"> -->
+                <div class="card-body">
+                    <form id="search-form">
+                        <div class="row g-0">
+                           
+                            <div class="col-lg-7 me-5 col-md-6 col-sm-12 d-flex">
+                              <div class="input-group mb-5">
+                                <input type="text" class="form-control" placeholder="Search for an organization" aria-label="Recipient's username" aria-describedby="button-addon2">
+
+                                <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                                </button>
+                              </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-3 col-sm-12 me-0 ">
+                              <select class="form-select" id="exampleFormControlSelect1">
+                                  <option>Sort By</option>
+                                  <option>Popular</option>
+                                  <option>Relevance</option>
+                                  <option>Name Ascending</option>
+                                  <option>Name Descending</option>
+                                  <option>Date Added</option>
+                                  <option>Last Modified</option>
+                              </select>
+                          </div>
+
+                        </div>
+                    </form>
+                </div>
+            <!-- </div> -->
+        </div>
+      </div>
+
+      
+    
+      
+      
+      <div class="row">
+        <div class="d-flex mt-3 mb-2 justify-content-around">
+
+          <div class="col">
+            <div class="card org-card" style="width: 18rem;">
+              <img src="https://images.pexels.com/photos/1477851/pexels-photo-1477851.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img-top" style="border-radius: 0" alt="...">
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <h5 class="card-title">Ghana Water Company</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <div class="text-center mt-3">
+                  <a href="#" class="btn btn-primary rounded-pill w-50">Explore</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card org-card" style="width: 18rem;">
+              <img src="https://images.pexels.com/photos/6990558/pexels-photo-6990558.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img-top" style="border-radius: 0" alt="...">
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <h5 class="card-title">Ghana Health Service</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <div class="text-center mt-3">
+                  <a href="#" class="btn btn-primary rounded-pill w-50">Explore</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card org-card" style="width: 18rem;">
+              <img src="https://images.pexels.com/photos/1166644/pexels-photo-1166644.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img-top" style="border-radius: 0" alt="...">
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <h5 class="card-title">Ghana Highway Authority</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <div class="text-center mt-3">
+                  <a href="#" class="btn btn-primary rounded-pill w-50">Explore</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+          <div class="col">
+            <div class="card org-card" style="width: 18rem;">
+              <img src="https://images.pexels.com/photos/1166643/pexels-photo-1166643.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img-top" style="border-radius: 0" alt="...">
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <h5 class="card-title">Food & Drugs Authority</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <div class="text-center mt-3">
+                  <a href="#" class="btn btn-primary rounded-pill w-50">Explore</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+        </div>
+        
+      </div>
+
+      <div class="row mt-5 mb-5">
+        <div class="d-flex mt-3 mb-2 justify-content-around">
+
+          <div class="col">
+            <div class="card org-card" style="width: 18rem;">
+              <img src="https://images.pexels.com/photos/4491539/pexels-photo-4491539.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img-top" style="border-radius: 0" alt="...">
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <h5 class="card-title">Ghana Water Company</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <div class="text-center mt-3">
+                  <a href="#" class="btn btn-primary rounded-pill w-50">Explore</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card org-card" style="width: 18rem;">
+              <img src="https://images.pexels.com/photos/9130702/pexels-photo-9130702.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img-top" style="border-radius: 0" alt="...">
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <h5 class="card-title">Ghana Health Service</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <div class="text-center mt-3">
+                  <a href="#" class="btn btn-primary rounded-pill w-50">Explore</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card org-card" style="width: 18rem;">
+              <img src="https://images.pexels.com/photos/4109858/pexels-photo-4109858.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img-top" style="border-radius: 0" alt="...">
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <h5 class="card-title">Ghana Highway Authority</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <div class="text-center mt-3">
+                  <a href="#" class="btn btn-primary rounded-pill w-50">Explore</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+          <div class="col">
+            <div class="card org-card" style="width: 18rem;">
+              <img src="https://images.pexels.com/photos/8624647/pexels-photo-8624647.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img-top" style="border-radius: 0" alt="...">
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <h5 class="card-title">Food & Drugs Authority</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <div class="text-center mt-3">
+                  <a href="#" class="btn btn-primary rounded-pill w-50">Explore</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+        </div>
+      </div>
+
+      <div>
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+        
+        
+    </main>
+
+    <div class="footer d-flex flex-column align-items-center justify-content-center py-3">
+      <div class="d-flex my-2">
+        <a href="#">
+            <img style="width: 25px; height: 25px" src="../../../static/images/call.png" class="me-3" />
+        </a>
+        <a href="https://www.linkedin.com/company/kehillah-global/mycompany/">
+            <img style="width: 25px; height: 25px" src="../../../static/images/linkedin.png" class="me-3" />
+        </a>
+        <a href="https://www.facebook.com/login/">
+            <img style="width: 25px; height: 25px" src="../../../static/images/facebook.png" class="me-3" />
+        </a>
+        <a href="https://twitter.com/cli_nonprofit">
+            <img style="width: 25px; height: 25px" src="../../../static/images/twitter.png" class="me-3" />
+        </a>
+      </div>
+      <div class="my-2" style="width: 900px; height: 0px; border: 0.50px #203ca1 solid"></div>
+      <p class="mb-0 text-muted">Copyright © 2023 Kehillah</p>
+  </div>
+  
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>

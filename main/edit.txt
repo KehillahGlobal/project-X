@@ -1,0 +1,2 @@
+    path('bookmarks/delete/<int:user_id>/', views.delete_bookmark, name = "delete_bookmark"),
+    path('bookmarks/<int:user_id>/', views.create_bookmark, name = "create_bookmark"),
